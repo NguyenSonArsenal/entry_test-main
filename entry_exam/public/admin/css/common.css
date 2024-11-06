@@ -1,0 +1,74 @@
+/* Class chung cho alert */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.alert ul li {
+    list-style: circle;
+    margin-bottom: 2px;
+}
+
+/* Class cho alert-danger */
+.alert-danger {
+    color: #a94442; /* Màu chữ đỏ đậm */
+    background-color: #f2dede; /* Màu nền đỏ nhạt */
+    border-color: #ebccd1; /* Màu viền đỏ nhạt */
+}
+
+/* Điều chỉnh khi hover */
+.alert-danger:hover {
+    background-color: #e4b9b9; /* Màu nền khi hover */
+    border-color: #e0b2b2; /* Màu viền khi hover */
+}
+
+.alert-success {
+    color: #155724; /* Green text */
+    background-color: #d4edda; /* Light green background */
+    border-color: #c3e6cb; /* Green border */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+/* Paginate */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a,
+.pagination li span {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pagination li a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination li.active span {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.pagination li.disabled span {
+    color: #aaa;
+    cursor: not-allowed;
+}
+/* End paginate */
