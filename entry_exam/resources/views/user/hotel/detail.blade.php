@@ -13,7 +13,11 @@
     </header>
     <div class="container">
         <div class="hotedetail_container">
-            <img src="/assets/img/{{ $hotel->file_path }}" alt="{{ $hotel->hotel_name }}">
+            @if ($hotel->file_path)
+                <img src="{{ asset('assets/img/' . $hotel->file_path) }}" alt="{{ $hotel->hotel_name }}">
+            @else
+                <img src="{{ asset('assets/img/default.avif') }}">
+            @endif
             <p class="hotel_title">{{ $hotel->hotel_name }}</p>
             <p class="hotel_information">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam esse beatae dolor, et facere animi distinctio facilis laboriosam obcaecati expedita minus voluptatibus aut amet, commodi quos aliquid vitae! Consequuntur, autem!

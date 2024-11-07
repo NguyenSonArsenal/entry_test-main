@@ -5,6 +5,7 @@ use App\Http\Controllers\TopController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\Admin\TopController as AdminTopController;
 use App\Http\Controllers\Admin\HotelController as AdminHotelController;
+use App\Http\Controllers\Admin\BookingController as AdminBookingHotelController;
 
 
     /** user screen */
@@ -35,5 +36,7 @@ Route::prefix('admin/hotel')->controller(AdminHotelController::class)->group(fun
         Route::post('/{id}', 'postHotelEditStore')->name('adminHotelEditStore');
     });
 });
+
+Route::get('/admin/booking', [AdminBookingHotelController::class, 'index'])->name('admin.booking.index');
 
 //Route::post('/admin/hotel/edit', [AdminHotelController::class, 'edit'])->name('adminHotelEditProcess');

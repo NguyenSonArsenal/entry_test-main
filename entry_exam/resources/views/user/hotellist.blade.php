@@ -13,11 +13,16 @@
     </header>
     <div class="container">
         <div class="hotellist_container">
+            Prefecture: {{ $prefecture->prefecture_name_alpha }}
             @foreach ($hotels as $hotel)
                 <a href="{{ route('hotelDetail', ['hotel_id' => $hotel->hotel_id]) }}" class="hotel_link">
                     <div class="hotellist_wrapper">
                         <div class="left_wrapper">
-                            <img src="/assets/img/{{ $hotel->file_path }}" alt="{{ $hotel->hotel_name }}">
+                            @if ($hotel->file_path)
+                                <img src="{{ asset('assets/img/' . $hotel->file_path) }}" alt="{{ $hotel->hotel_name }}">
+                            @else
+                                <img src="{{ asset('assets/img/default.avif') }}">
+                            @endif
                         </div>
                         <div class="right_wrapper">
                             <p class="hotel_title">{{ $hotel->hotel_name }}</p>
