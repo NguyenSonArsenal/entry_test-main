@@ -18,7 +18,7 @@
         <div class="search-hotel-name">
             <form action="{{ route('admin.booking.index') }}" method="get" style="margin-bottom: 15px" id="form-search">
                 <input type="text" name="hotel_name" value="{{ request('hotel_name') }}" placeholder="ホテル名">
-                <input type="text" name="customer_name" value="{{ request('customer_name') }}" placeholder="顧客名 Customer name">
+                <input type="text" name="customer_name" value="{{ request('customer_name') }}" placeholder="顧客名">
                 <button type="button" id="btn-search">検索</button>
             </form>
 
