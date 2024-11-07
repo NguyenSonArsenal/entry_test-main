@@ -7,8 +7,21 @@ export default defineConfig({
             input: [
                 // 'resources/css/app.css',
                 // 'resources/js/app.js',
-                'resources/scss/**/*.scss',
-                'resources/css/**/*.css',
+                // 'resources/scss/**/*.scss',
+                // 'resources/css/**/*.css',
+
+                'resources/scss/admin/home.scss',
+                'resources/scss/admin/result.scss',
+                'resources/scss/admin/search.scss',
+                'resources/scss/admin/side-menu.scss',
+                'resources/scss/user/common.scss',
+                'resources/scss/user/home.scss',
+                'resources/scss/user/hotedetail.scss',
+                'resources/scss/user/hotellist.scss',
+                'resources/css/app.css',
+                'resources/css/reset.css',
+                'resources/css/admin/base.css',
+                'resources/css/user/base.css',
             ],
             refresh: true,
         }),
@@ -24,5 +37,9 @@ export default defineConfig({
     //     }
     // },
 
-    server: false,
+    server: {
+        hmr: {
+            host: 'localhost',
+        },
+    },
 });
